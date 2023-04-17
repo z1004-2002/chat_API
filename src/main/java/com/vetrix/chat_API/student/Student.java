@@ -24,6 +24,6 @@ public class Student {
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID",strategy = "org.hibernate.id.UUIDGenerator")
     private UUID id;
-    private String userName;
+    private String username;
     private String number;
 }

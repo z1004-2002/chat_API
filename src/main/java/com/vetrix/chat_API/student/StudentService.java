@@ -32,7 +32,7 @@ public class StudentService {
             throw new IllegalStateException("this number is not present in database");
         Optional<Object> s = studentRepository.findById(students.get(0).getId()).map(stu -> {
             stu.setNumber(student.getNumber());
-            stu.setUserName(student.getUserName());
+            stu.setUsername(student.getUsername());
             return studentRepository.save(stu);
         });
         return student;

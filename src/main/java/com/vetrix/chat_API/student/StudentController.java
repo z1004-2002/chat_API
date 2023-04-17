@@ -35,6 +35,7 @@ public class StudentController {
             throw new IllegalStateException("this number is not present in database");
         return students.get(0);
     }
+
     @GetMapping
     @Operation(summary = "get All Students")
     public List<Student> getAllStudent(){
@@ -47,7 +48,7 @@ public class StudentController {
         return studentService.updateStudent(student, number);
     }
 
-    @DeleteMapping("/delete/{matricule}")
+    @DeleteMapping("/delete/{number}")
     @Operation(summary = "delete Student by his number registration")
     public ResponseEntity<String> deleteStudent(@PathVariable String number){
         studentService.deleteStudent(number);

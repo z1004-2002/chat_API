@@ -1,6 +1,5 @@
 package com.vetrix.chat_API.file;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

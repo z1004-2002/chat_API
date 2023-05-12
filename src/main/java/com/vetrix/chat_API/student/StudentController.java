@@ -29,11 +29,8 @@ public class StudentController {
 
     @GetMapping(path = "/matricule")
     @Operation(summary = "get student's information by number registration")
-    public Student getByNumber(@RequestParam(name = "matricule") String number){
-        List<Student> students = studentService.findByNumber(number);
-        if (students.size() == 0)
-            throw new IllegalStateException("this number is not present in database");
-        return students.get(0);
+    public List<Student> getByNumber(@RequestParam(name = "matricule") String number){
+        return studentService.findByNumber(number);
     }
 
     @GetMapping
